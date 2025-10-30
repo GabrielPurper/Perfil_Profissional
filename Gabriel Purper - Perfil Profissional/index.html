@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gabriel Purper Andrade e Silva - Front-end Júnior</title>
+
+  <style>
+    /* ======== ESTILO GERAL ======== */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0d0d0d;
+      color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      background-color: #1a1a1a;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    }
+
+    h1 {
+      font-size: 2em;
+      margin-bottom: 5px;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    h2 {
+      color: #00aaff;
+      border-bottom: 2px solid #00aaff;
+      padding-bottom: 5px;
+      margin-top: 30px;
+    }
+
+    h3 {
+      margin-bottom: 5px;
+      color: #e6e6e6;
+    }
+
+    p {
+      line-height: 1.6;
+      color: #cccccc;
+    }
+
+    .subtitulo {
+      text-align: center;
+      color: #00aaff;
+      margin-bottom: 10px;
+    }
+
+    .info {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #aaa;
+    }
+
+    .info a {
+      color: #00aaff;
+      text-decoration: none;
+    }
+
+    /* ======== BOTÕES ======== */
+    button {
+      background-color: #00aaff;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 10px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    /* Animação ao passar o mouse */
+    button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 10px rgba(0, 170, 255, 0.4);
+    }
+
+    /* Animação ao clicar */
+    button:active {
+      transform: translateY(2px);
+      box-shadow: 0 2px 5px rgba(0, 170, 255, 0.3);
+    }
+
+    /* ======== SEÇÕES ======== */
+    .card {
+      background-color: #262626;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    /* ======== HABILIDADES ======== */
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .skill {
+      background-color: #333;
+      padding: 8px 15px;
+      border-radius: 20px;
+      color: #00aaff;
+      font-weight: 500;
+      border: 1px solid #00aaff;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    /* Animação de destaque nas skills */
+    .skill:hover {
+      background-color: #00aaff;
+      color: #fff;
+      transform: scale(1.05);
+    }
+
+    /* ======== BOTÃO IMPRIMIR ======== */
+    .btn-imprimir {
+      display: block;
+      margin: 20px auto;
+      background-color: #00ff88;
+      color: #000;
+      transition: transform 0.2s ease, background-color 0.2s ease;
+    }
+
+    .btn-imprimir:hover {
+      background-color: #00ffaa;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <!-- Cabeçalho -->
+    <h1>Gabriel Purper Andrade e Silva</h1>
+    <p class="subtitulo">Desenvolvedor Front-end Júnior</p>
+    <p class="info">
+      gabriel.email@exemplo.com | (11) 98765-4321 | 
+      <a href="#">linkedin.com/in/gabrielpurper</a>
+    </p>
+
+    <!-- Perfil -->
+    <h2>Perfil Profissional</h2>
+    <p>
+      Profissional em início de carreira com grande interesse em desenvolvimento web,
+      focado em criar experiências de usuário interativas e responsivas.
+      Busco uma oportunidade para aplicar e expandir meus conhecimentos em HTML, CSS e JavaScript
+      em um ambiente de equipe dinâmico.
+    </p>
+
+    <!-- Experiência -->
+    <h2>Experiência Profissional</h2>
+
+    <div class="card">
+      <h3>Estagiário em Desenvolvimento Web</h3>
+      <p><strong>Empresa Incrível</strong> | Jan 2024 - Presente</p>
+      <button onclick="mostrarDetalhes(this)">Mostrar Detalhes</button>
+      <p class="detalhes" style="display:none;">
+        Responsável por manutenção de páginas, correção de bugs e criação de interfaces responsivas.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Freelancer - Criação de Sites</h3>
+      <p><strong>Projetos Pessoais</strong> | Jun 2023 - Dez 2023</p>
+      <button onclick="mostrarDetalhes(this)">Mostrar Detalhes</button>
+      <p class="detalhes" style="display:none;">
+        Desenvolvimento de sites institucionais utilizando HTML, CSS e JavaScript puro.
+      </p>
+    </div>
+
+    <!-- Formação -->
+    <h2>Formação Acadêmica</h2>
+
+    <div class="card">
+      <h3>Análise e Desenvolvimento de Sistemas</h3>
+      <p><strong>Senac Nações Unidas</strong> | 2023 - 2025 (Cursando)</p>
+      <button onclick="mostrarDetalhes(this)">Mostrar Detalhes</button>
+      <p class="detalhes" style="display:none;">
+        Estudo de fundamentos de programação, estruturas de dados e tecnologias web modernas.
+      </p>
+    </div>
+
+    <!-- Habilidades -->
+    <h2>Habilidades Técnicas</h2>
+    <div class="skills">
+      <span class="skill">HTML5</span>
+      <span class="skill">CSS3</span>
+      <span class="skill">JavaScript (ES6+)</span>
+      <span class="skill">React.js (Básico)</span>
+      <span class="skill">Git & GitHub</span>
+      <span class="skill">Design Responsivo</span>
+      <span class="skill">Metodologias Ágeis (Básico)</span>
+    </div>
+
+    <!-- Botão de imprimir -->
+    <button class="btn-imprimir" onclick="imprimirCurriculo()">Imprimir / Salvar PDF</button>
+  </div>
+
+  <script>
+    /* ======== FUNÇÃO PARA MOSTRAR/ESCONDER DETALHES ======== */
+    function mostrarDetalhes(botao) {
+      const detalhes = botao.nextElementSibling;
+      if (detalhes.style.display === "none") {
+        detalhes.style.display = "block";
+        botao.textContent = "Ocultar Detalhes";
+      } else {
+        detalhes.style.display = "none";
+        botao.textContent = "Mostrar Detalhes";
+      }
+    }
+
+    /* ======== FUNÇÃO PARA IMPRIMIR OU SALVAR EM PDF ======== */
+    function imprimirCurriculo() {
+      window.print(); // Abre a janela de impressão do navegador
+    }
+  </script>
+</body>
+</html>
